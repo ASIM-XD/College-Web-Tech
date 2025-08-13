@@ -7,39 +7,58 @@
 </head>
 
 <style>
-    body{
-        margin: 0px;
-        padding: 0px;
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: aliceblue;
     }
-    nav{
+    nav {
         background-color: aqua;
+        padding: 10px 0;
     }
-    table{
+    table {
         margin: 0 auto;
     }
-    td{
-        width: 300px;
-        font-size: 20px;
+    td {
+        width: 150px;
+        font-size: 18px;
         text-align: center;
+        font-weight: bold;
     }
-    td a{
+    td a {
         text-decoration: none;
         color: black;
     }
-    .inputs{
+    td a:hover {
+        color: blue;
+    }
+    .inputs {
         text-align: center;
-        margin-top: 200px;
+        margin-top: 100px;
+        padding: 20px;
+        background-color: white;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
     }
-    label{
-        font-size: 25px;
+    label {
+        font-size: 18px;
+        font-weight: bold;
     }
-    h2{
+    h2 {
         text-align: center;
-        font-size: 50px;
-        color:royalblue;
+        font-size: 36px;
+        color: royalblue;
+        margin-top: 30px;
     }
-    input{
-        font-size: 25px;
+    input {
+        font-size: 18px;
+        padding: 6px;
+        margin-top: 5px;
+        border-radius: 5px;
     }
 </style>
 
@@ -47,7 +66,7 @@
     <nav>
         <table>
             <tr>
-                <td><a href="./profile.html">Home</a> </td>
+                <td><a href="./profile.html">Home</a></td>
                 <td><a href="./about.html">About</a></td>
                 <td><a href="./skills.html">Skills</a></td>
                 <td><a href="./project.html">Projects</a></td>
@@ -61,18 +80,16 @@
     <h2>Login</h2>
 
     <form action="">
-
         <div class="inputs">
             <label for="username">Username : </label>
             <input id="username" type="text" name="User" placeholder="Enter Username">
             <br><br>
             <label for="password">Password : </label>
-            <input id="password" type="password" name="Pass" placeholder="Enter Username">
+            <input id="password" type="password" name="Pass" placeholder="Enter Password">
             <br><br>
-            <input style="background-color: green;color:white" type="submit" value="Login">
-            <input style="background-color: crimson; color: white;" type="reset" value="Reset">
+            <input style="background-color: green; color:white; cursor:pointer;" type="submit" value="Login">
+            <input style="background-color: crimson; color: white; cursor:pointer;" type="reset" value="Reset">
         </div>
     </form>
-    
 </body>
 </html>

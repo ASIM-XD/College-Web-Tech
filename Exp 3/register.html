@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
 </head>
 
 <style>
@@ -11,30 +11,69 @@
         margin: 0px;
         padding: 0px;
         text-align: center;
+        background-color: aliceblue;
+        font-family: Arial, sans-serif;
     }
     nav{
         background-color: aqua;
+        padding: 10px 0;
     }
     table{
         margin: 0 auto;
     }
     td{
-        width: 300px;
-        font-size: 20px;
+        width: 150px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
     }
     td a{
         text-decoration: none;
         color: black;
     }
-    label{
-        font-size: 25px;
+    td a:hover{
+        color: blue;
     }
     h2{
-        font-size: 50px;
-        color:royalblue;
+        font-size: 36px;
+        color: royalblue;
+        margin-top: 30px;
     }
-    input{
-        font-size: 25px;
+    .inputs{
+        border: 1px solid #ccc;
+        background-color: white;
+        border-radius: 8px;
+        width: 500px;
+        margin: 30px auto;
+        padding: 20px;
+        text-align: left;
+    }
+    label{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    input,select{
+        font-size: 18px;
+        padding: 6px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    textarea{
+        border: 1px solid black;
+        font-size: 15px;
+    }
+    .submitbtn{
+        background-color: green;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+        padding: 8px 16px;
+        border-radius: 5px;
+        margin-top: 15px;
+    }
+    .submitbtn:hover{
+        background-color: darkgreen;
     }
 </style>
 
@@ -56,58 +95,56 @@
     <h2>Register</h2>
 
     <form action="./login.html">
-
         <div class="inputs">
-            <label for="username">Username : </label>
-            <input id="username" type="text" name="User" placeholder="Enter Username">
-            <br><br>
-            <label for="password">Password : </label>
-            <input id="password" type="password" name="Pass" placeholder="Enter Username">
-            <br><br>
-            <label for="Uname">Full Name : </label>
-            <input id="Uname" type="text" name="UName" placeholder="Enter your FullName">
-            <br><br>
-            <label for="Add">Address : </label>
-            <textarea name="Address" id="Add" placeholder="Enter your full Address" rows="5" cols="50" style="font-size: 12px;"></textarea>
-            <br><br>
-            <label for="skills">Choose Skills below : </label>
+            <label for="username">Username : </label><br>
+            <input type="text" id="username" name="User" placeholder="Enter Username" class="textbox">
             <br><br>
 
-            <label for="dsa" style="margin-left: 20px;">DSA : </label>
-            <input type="checkbox" name="DSA" id="dsa">
+            <label for="password">Password : </label><br>
+            <input type="password" id="password" name="Pass" placeholder="Enter Password" class="textbox">
+            <br><br>
 
+            <label for="Uname">Full Name : </label><br>
+            <input type="text" id="Uname" name="UName" placeholder="Enter your Full Name" class="textbox">
+            <br><br>
+
+            <label for="Add">Address : </label><br>
+            <textarea name="Address" id="Add" placeholder="Enter your full Address" rows="5" cols="50" class="textarea"></textarea>
+            <br><br>
+
+            <label>Choose Skills below : </label><br><br>
+            <label for="dsa">DSA : </label>
+            <input type="checkbox" name="DSA" id="dsa" class="checkbox">
             <label for="web" style="margin-left: 20px;">Web Dev : </label>
-            <input type="checkbox" name="WEBDEV" id="web">
-
+            <input type="checkbox" name="WEBDEV" id="web" class="checkbox">
             <label for="dbms" style="margin-left: 20px;">DBMS : </label>
-            <input type="checkbox" name="DBMS" id="dbms">
+            <input type="checkbox" name="DBMS" id="dbms" class="checkbox">
             <br><br>
 
-            <label for="dob">Select DOB : </label>
-            <input type="date" name="dateOfBirth" id="dob">
+            <label for="dob">Select DOB : </label><br>
+            <input type="date" name="dateOfBirth" id="dob" class="datebox">
             <br><br>
 
-            <label for="gender">Gender : </label>
-
-            <label for="male" style="margin-left: 20px;">Male </label>
-            <input type="radio" name="gen" id="male" value="male">
-
+            <label>Gender : </label><br>
+            <label for="male">Male </label>
+            <input type="radio" name="gen" id="male" value="male" class="radiobtn">
             <label for="female" style="margin-left: 20px;">Female </label>
-            <input type="radio" name="gen" id="female" value="female">
-
+            <input type="radio" name="gen" id="female" value="female" class="radiobtn">
             <label for="other" style="margin-left: 20px;">Others </label>
-            <input type="radio" name="gen" id="other" value="others">
+            <input type="radio" name="gen" id="other" value="others" class="radiobtn">
             <br><br>
 
-            <label for="clg">Choose your College : </label>
-            <select id="clg" style="font-size: 20px;">
+            <label for="clg">Choose your College : </label><br>
+            <select id="clg" class="dropdown">
                 <option value="None" selected>Select one</option>
                 <option value="Pandit Deendayal Energy University">Pandit Deendayal Energy University</option>
                 <option value="Nirma">Nirma University</option>
                 <option value="DDU">Dharamsinh Desai University</option>
             </select>
             <br><br>
-            <input style="background-color: green;color:white" type="submit" value="Register">
+
+            <input class="submitbtn" style="margin-right: 150px;" type="submit" value="Register">
+            <input class="submitbtn" style="background-color: crimson;margin-left: 160px;" type="reset" value="Clear">
         </div>
     </form>
 </body>
