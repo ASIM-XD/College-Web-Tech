@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+<body>
+    <nav>
+        <table>
+            <tr>
+                <td><a href="./profile.html">Home</a> </td>
+                <td><a href="./about.html">About</a></td>
+                <td><a href="./skills.html">Skills</a></td>
+                <td><a href="./project.html">Projects</a></td>
+                <td><a href="./login.html">Login</a></td>
+                <td><a href="./register.html">Register</a></td>
+                <td><a href="./review.html" style="color: crimson;">Review</a></td>
+            </tr>
+        </table>
+    </nav>
+
+
+    <h2>Give Your Review</h2>
+    <div class="inputs">
+        <form action="">
+            <label for="rating">Rate Us (1 to 5):</label>
+            <br><br>
+            <span>1 </span><input type="range" id="rating" name="rating" min="1" max="5" value="3" style="width: 300px;"><span> 5</span>
+            <br><br>
+            <textarea name="feedback" rows="4" cols="40" placeholder="Write your feedback here..."></textarea>
+            <br><br>
+            <input type="submit" value="Send" class="submit-btn">
+        </form>
+    </div>
+</body>
+</html>
