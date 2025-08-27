@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <table>
+        <tr>
+            <td><a href="./profile.html">Home</a></td>
+            <td><a href="./about.html">About</a></td>
+            <td><a href="./skills.html">Skills</a></td>
+            <td><a href="./project.html">Projects</a></td>
+            <td><a href="./login.html">Login</a></td>
+            <td><a href="./register.html">Register</a></td>
+            <td><a href="./review.html">Review</a></td>
+            <td><a href="./MulPage.html">Multiplication</a></td>
+            <td><a href="./SimpleInt.html" style="color: crimson;">Simple Interest</a></td>
+        </tr>
+        </table>
+    </nav>
+
+    <div class="calc-generator">
+        <div class="calc-box">
+            <h2>Simple Interest Calculator</h2>
+
+            <label for="principal">Principal Amount:</label>
+            <input type="range" id="principal" min="0" max="10000000" step="1" value="10000" oninput="syncInputs('principal')">
+            <input type="number" id="principalText" min="0" max="10000000" step="1" value="10000" oninput="syncInputs('principalText')" style="width: 30%;">
+            <br>
+            <label for="time">Time (Years):</label>
+            <input type="range" id="time" min="0" max="100" step="1" value="5" oninput="syncInputs('time')">
+            <input type="number" id="timeText" min="0" max="100" step="1" value="5" oninput="syncInputs('timeText')">
+            <br>
+            <label for="rate">Rate of Interest (%):</label>
+            <input type="range" id="rate" min="0" max="100" step="1" value="10" oninput="syncInputs('rate')">
+            <input type="number" id="rateText" min="0" max="100" step="1" value="10" oninput="syncInputs('rateText')">
+            <br>
+            <div id="output">
+                <h3 id="finalAmount">Final Amount: ₹0</h3>
+                <h3 id="interestAmount">Interest: ₹0</h3>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function formatNumber(num) {
+            return num.toLocaleString('en-IN');
+        }
+
+        function calculateSI() {
+            let P = parseFloat(document.getElementById("principal").value);
+            let T = parseInt(document.getElementById("time").value);
+            let R = parseFloat(document.getElementById("rate").value);
+
+            let SI = (P * R * T) / 100;
+            let totalAmount = P + SI;
+
+            document.getElementById("finalAmount").textContent = "Final Amount: ₹" + formatNumber(Math.round(totalAmount));
+            document.getElementById("interestAmount").textContent = "Interest: ₹" + formatNumber(Math.round(SI));
+        }
+
+        function syncInputs(source) {
+            if (source === 'principal') {
+                document.getElementById('principalText').value = document.getElementById('principal').value;
+            } else if (source === 'principalText') {
+                document.getElementById('principal').value = document.getElementById('principalText').value;
+            } else if (source === 'time') {
+                document.getElementById('timeText').value = document.getElementById('time').value;
+            } else if (source === 'timeText') {
+                document.getElementById('time').value = document.getElementById('timeText').value;
+            } else if (source === 'rate') {
+                document.getElementById('rateText').value = document.getElementById('rate').value;
+            } else if (source === 'rateText') {
+                document.getElementById('rate').value = document.getElementById('rateText').value;
+            }
+            calculateSI();
+        }
+    </script>
+</body>
+</html>

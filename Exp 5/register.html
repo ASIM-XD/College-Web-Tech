@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <table>
+            <tr>
+                <td><a href="./profile.html">Home</a> </td>
+                <td><a href="./about.html">About</a></td>
+                <td><a href="./skills.html">Skills</a></td>
+                <td><a href="./project.html">Projects</a></td>
+                <td><a href="./login.html">Login</a></td>
+                <td><a href="./register.html" style="color: crimson;">Register</a></td>
+                <td><a href="./review.html">Review</a></td>
+                <td><a href="./MulPage.html">Multiplication</a></td>
+                <td><a href="./SimpleInt.html">Simple Interest</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <h2>Register</h2>
+
+    <form action="./login.html">
+        <div class="inputs" style="text-align: left;">
+            <label for="username">Username : </label><br>
+            <input type="text" id="username" name="User" placeholder="Enter Username" class="textbox">
+            <br><br>
+
+            <label for="password">Password : </label><br>
+            <input type="password" id="password" name="Pass" placeholder="Enter Password" class="textbox">
+            <br><br>
+
+            <label for="Uname">Full Name : </label><br>
+            <input type="text" id="Uname" name="UName" placeholder="Enter your Full Name" class="textbox">
+            <br><br>
+
+            <label for="Add">Address : </label><br>
+            <textarea name="Address" id="Add" placeholder="Enter your full Address" rows="5" cols="40" class="textarea"></textarea>
+            <br><br>
+
+            <label>Choose Skills below : </label><br><br>
+            <label for="dsa">DSA : </label>
+            <input type="checkbox" name="DSA" id="dsa" class="checkbox">
+            <label for="web" style="margin-left: 20px;">Web Dev : </label>
+            <input type="checkbox" name="WEBDEV" id="web" class="checkbox">
+            <label for="dbms" style="margin-left: 20px;">DBMS : </label>
+            <input type="checkbox" name="DBMS" id="dbms" class="checkbox">
+            <br><br>
+
+            <label for="dob">Select DOB : </label><br>
+            <input type="date" name="dateOfBirth" id="dob" class="datebox">
+            <br><br>
+
+            <label>Gender : </label><br>
+            <label for="male">Male </label>
+            <input type="radio" name="gen" id="male" value="male" class="radiobtn">
+            <label for="female" style="margin-left: 20px;">Female </label>
+            <input type="radio" name="gen" id="female" value="female" class="radiobtn">
+            <label for="other" style="margin-left: 20px;">Others </label>
+            <input type="radio" name="gen" id="other" value="others" class="radiobtn">
+            <br><br>
+
+            <label for="clg">Choose your College : </label><br>
+            <select id="clg" class="dropdown">
+                <option value="None" selected>Select one</option>
+                <option value="Pandit Deendayal Energy University">Pandit Deendayal Energy University</option>
+                <option value="Nirma">Nirma University</option>
+                <option value="DDU">Dharamsinh Desai University</option>
+            </select>
+            <br><br>
+
+            <input class="submit-btn" style="margin-right: 160px;"  type="submit" value="Register">
+            <input class="clear-btn" style="margin-left: 140px;" type="reset" value="Clear">
+        </div>
+    </form>
+</body>
+</html>
